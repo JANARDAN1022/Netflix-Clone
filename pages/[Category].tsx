@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import MovieList from '@/components/MovieList';
 import Billboard from '@/components/Billboard';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 
 
@@ -49,7 +50,7 @@ const Category = () => {
 
         />
 
-
+   <Footer />
         
     </div>
     </>

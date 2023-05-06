@@ -5,6 +5,7 @@ import Billboard from "@/components/Billboard";
 import MovieList from "@/components/MovieList";
 import useMovieList from "@/hooks/useMovieList";
 import useFavorites from "@/hooks/useFavorites";
+import Footer from "@/components/Footer";
 
 
 
@@ -46,6 +47,9 @@ export default function Home() {
   <MovieList title="TvShows" data={filterdTvshowData}/>
   <MovieList title="New && Popular" data={filterdNewData}/>
   <MovieList title="My List" data={favorites}/>
+  </div>
+  <div className="absolute bottom-[-98vmax] mt-20 w-full   ">
+  <Footer />
   </div>
    </>
   )

@@ -36,7 +36,7 @@ const MovieCard :React.FC<MovieCardProps>=({
     src={data.thumbnailUrl} alt='' />
 
 
-   <div className='
+   <div className=' w-[20vmax]
   opacity-0 absolute top-[-10px]  transition duration-300 
   z-20 invisible sm:visible delay-500
    scale-0 group-hover:scale-110 group-hover:-translate-y-[1vw]

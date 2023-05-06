@@ -23,7 +23,7 @@ const FavoriteCard :React.FC<FavoriteCardProps>=({
   
  
   return (
-    <div className='group  bg-zinc-900 relative h-[10vw] mt-2  ml-1 '>
+    <div className='group bg-zinc-900 relative h-[10vw] mt-2  ml-1 '>
     
     <img 
     className='
@@ -36,9 +36,9 @@ const FavoriteCard :React.FC<FavoriteCardProps>=({
     src={data.thumbnailUrl} alt='' />
 
 
-   <div className='
+   <div className='w-[20vmax]
   opacity-0 absolute top-[-10px]  transition duration-300 
-  zindex invisible sm:visible delay-500
+  z-20 invisible sm:visible delay-500
    scale-0 group-hover:scale-110 group-hover:-translate-y-[1vw]
    group-hover:translate-x-[2px] group-hover:opacity-100  
    '>
