@@ -25,6 +25,10 @@ html{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+.slick-list{
+  padding-top: 42px !important;
+  padding-left: 16px !important;
+}
 
 /*.zindex{
   z-index: 1000 !important;

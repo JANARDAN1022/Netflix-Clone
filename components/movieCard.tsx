@@ -23,23 +23,23 @@ const MovieCard :React.FC<MovieCardProps>=({
   
  
   return (
-    <div className='group  bg-zinc-900 relative h-[16.8vw] mt-10  ml-2 '>
+    <div className='group  bg-zinc-900 relative h-[15vw]  ml-[1.5px]'>
     
     <img 
     className='
      cursor-pointer object-cover transition
     duration shadow--xl rounded-[3px]
     group-hover:opacity-90 sm:group-hover:opacity-0
-   delay-300 w-[18vw] h-[8.5vw] 
+   delay-300 w-[16vw] h-[8.5vw] 
     '
     onClick={()=> router.push(`/watch/${data?.id}`)}   
     src={data.thumbnailUrl} alt='' />
 
 
-   <div className=' w-[20vmax]
+   <div className=' w-[20vmax] 
   opacity-0 absolute top-[-10px]  transition duration-300 
   z-20 invisible sm:visible delay-500
-   scale-0 group-hover:scale-110 group-hover:-translate-y-[1vw]
+   scale-0 group-hover:scale-110 group-hover:-translate-y-[2vw]
    group-hover:translate-x-[2px] group-hover:opacity-100  
    '>
    

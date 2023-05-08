@@ -24,6 +24,7 @@ const Billboard = () => {
     console.log('category:',Categories);
     const Random = Math.floor(Math.random() * Categories.length);
      const categories = Categories[Random];
+     console.log(categories);
     
     
   return (
@@ -34,8 +35,8 @@ const Billboard = () => {
  autoPlay
  loop
  muted
-  poster={path==='/'?data?.thumbnailUrl:categories?.thumbnailUrl}
-  src={path==='/'?data?.videoUrl:categories?.videoUrl}></video>
+  poster={path==='/'?data.thumbnailUrl:categories?.thumbnailUrl}
+  src={path==='/'?data.videoUrl:categories?.videoUrl}></video>
   
    
    <div className='absolute top-[30%] md:top-[35%] ml-4 md:ml-16'>
@@ -60,18 +61,18 @@ const Billboard = () => {
    
     <video  className='
     cursor-pointer object-cover transition duration
-    shadow-xl rounded-t-md w-[50vw] h-[21vw]  
+    shadow-xl rounded-t-md w-[50vw] h-[21vw] 
     '
-    onClick={()=> router.push(`/watch/${data?.id}`)}
+    onClick={()=> router.push(`/watch/${path==='/'?data?.id:categories?.id}`)}
     
     
-    src={data?.videoUrl} autoPlay  muted loop  />
+    src={path==='/'?data?.videoUrl:categories?.videoUrl} autoPlay  muted loop  />
     <MdOutlineCancel size={50} className='cursor-pointer text-white absolute z-20 top-0 right-3' onClick={()=>setshowInfo(false)}/> 
    
    <div className='
     bg-zinc-800 p-2 lg:p-4 absolute 
    w-full  transition  shadow-md rounded-b-md
-    flex flex-col h-[21vw]
+    flex flex-col h-max z-50
       '>
      
   <div className='flex flex-row items-center absolute top-[-70px] left-5  gap-5 '>
@@ -80,10 +81,10 @@ const Billboard = () => {
    cursor-pointer w-4 h-4 lg:w-14 lg:h-14 
    bg-white rounded-full flex justify-center
    items-center transition hover:bg-neutral-300 
-   ' onClick={()=> router.push(`/watch/${data?.id}`)}>
+   ' onClick={()=> router.push(`/watch/${path==='/'?data?.id:categories?.id}`)}>
        <BsFillPlayFill size={35} className='ml-1'/>
    </div>
-   <BillboardFavoriteButton movieId={data?.id}/>
+   <BillboardFavoriteButton movieId={path==='/'?data?.id:categories?.id}/>
   </div>
   
    <div className='flex justify-between '>
@@ -92,17 +93,22 @@ const Billboard = () => {
    </p>
 
    <div className='flex flex-row mt-4 gap-2 items-center' >
-    <p className='text-white text-[10px] lg:text-[20px]'>{data?.duration}</p>
+    <p className='text-white text-[10px] lg:text-[20px]'>{path==='/'?data?.duration:categories?.duration}</p>
    </div>
    </div>
 
    <div className='flex flex-row mt-4 gap-2 items-center'>
-    <p className='text-white text-[15px] lg:text-2xl'>{data?.genre}</p>
+    <p className='text-white text-[15px] lg:text-2xl'>{path==='/'?data?.genre:categories?.genre}</p>
    </div>
 
    <div className='text-white mt-4 '>
     <p className='text-2xl'>Description:</p>
-    <p className='mt-3 text-[22px] font-serif'>{data?.description}</p>
+    <p className='mt-3 text-[22px] font-serif'>{path==='/'?data?.description:categories?.description}</p>
+   </div>
+    
+   <div className='text-white mt-4 flex items-center gap-3'>
+    <p className='text-2xl'>Category:</p>
+    <p className='mt-2 text-[22px] font-serif text-red-400'>{path==='/'?data?.category:categories?.category}</p>
    </div>
 
    </div>

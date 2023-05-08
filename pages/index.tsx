@@ -42,13 +42,13 @@ export default function Home() {
    <>
   <Navbar />
   <Billboard />
-  <div className="absolute top-[48vmax] flex flex-col ">
+  <div className="absolute top-[48vmax] flex flex-col">
   <MovieList title="Movies" data={filterdMovieData} />
   <MovieList title="TvShows" data={filterdTvshowData}/>
   <MovieList title="New && Popular" data={filterdNewData}/>
   <MovieList title="My List" data={favorites}/>
   </div>
-  <div className="absolute bottom-[-98vmax] mt-20 w-full   ">
+  <div className="absolute bottom-[-103vmax] mt-20  w-full   ">
   <Footer />
   </div>
    </>

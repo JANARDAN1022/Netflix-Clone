@@ -26,13 +26,13 @@ const MovieList : React.FC<MovieListProps>=({data, title}) => {
     
     const PrevArrow = (props:any) => (
         <button {...props} className="slick-arrow slick-prev ">
-          <AiOutlineArrowLeft className={`text-white cursor-pointer p-1 top-[40px] left-[5px] absolute z-10 w-10 bg-[rgba(0,0,0,0.7)] h-[8.5vmax] ${showLeftArrow?'visible':'hidden'} `} onClick={()=>setshowLeftArrow(!showLeftArrow)} />
+          <AiOutlineArrowLeft className={`text-white cursor-pointer p-1 top-[42px] left-[0px] absolute z-[1] w-10 bg-[rgba(0,0,0,0.7)] h-[8.5vmax] ${showLeftArrow?'visible':'hidden'} `} onClick={()=>setshowLeftArrow(!showLeftArrow)} />
         </button>
       );
       
       const NextArrow = (props:any) => (
         <button {...props} className="slick-arrow slick-next">
-          <AiOutlineArrowRight className={`text-white cursor-pointer  absolute z-10 p-1 w-10 bg-[rgba(0,0,0,0.7)] h-[8.5vmax] right-[0px] top-[40px] ${showLeftArrow?'hidden':'visible'}`} onClick={()=>setshowLeftArrow(!showLeftArrow)}/>
+          <AiOutlineArrowRight className={`text-white cursor-pointer  absolute z-[1] p-1 w-10 bg-[rgba(0,0,0,0.7)] h-[8.5vmax] right-[0px] top-[42px] ${showLeftArrow?'hidden':'visible'}`} onClick={()=>setshowLeftArrow(!showLeftArrow)}/>
         </button>
       );
 
@@ -44,15 +44,15 @@ const MovieList : React.FC<MovieListProps>=({data, title}) => {
    
 
   return (
-    <div className='px-4 md:px-12  relative transition ' >
+    <div className='h-[20.3vmax] px-4 md:px-12  relative transition ' >
      
-    <div >
-        <p className='text-white text-md md:text-xl  lg:text-3xl font-semibold '>
+    <div className=''>
+        <p className='text-white  text-md md:text-xl mb-2  lg:text-3xl font-semibold '>
             {title}
         </p>
         <Slider
         
-        className='w-[95vmax]  '
+        className='w-[95vmax] '
   infinite={false}
   slidesToShow={6}
   slidesToScroll={5}
