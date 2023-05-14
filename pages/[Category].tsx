@@ -5,7 +5,25 @@ import MovieList from '@/components/MovieList';
 import Billboard from '@/components/Billboard';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { NextPageContext } from "next";
+import { getSession} from "next-auth/react";
 
+
+export async function getServerSideProps(context: NextPageContext){
+  const session = await getSession(context);
+
+  if(!session){
+      return {
+          redirect:{
+              destination:'/Login',
+              permanent: false,
+          }
+      }
+  }
+  return {
+      props:{}
+  }
+}
 
 
 const Category = () => {
@@ -29,6 +47,8 @@ const Category = () => {
 
       const subNewCategoryData1 = data.filter((movie:any) => movie.subCategory === categories.New[0]);
       const subNewCategoryData2 = data.filter((movie:any) => movie.subCategory === categories.New[1]);
+
+     
     
    
     

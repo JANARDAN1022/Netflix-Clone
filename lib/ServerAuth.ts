@@ -5,6 +5,14 @@ import { authOptions  } from "@/pages/api/auth/[...nextauth]";
 
 const serverauth = async (req:NextApiRequest,res:NextApiResponse) => {
     const session = await getServerSession (req,res,authOptions);
+    if (!session) {
+        return {
+          redirect: {
+            destination: '/Login',
+            permanent: false,
+          },
+        }
+      }
 
     if(!session?.user?.email){
       throw new Error("Sign In Required");
@@ -16,9 +24,14 @@ const serverauth = async (req:NextApiRequest,res:NextApiResponse) => {
         }
     });
 
-    if(!currentUser){
-        throw new Error('Sign in Required');
-    }
+    if (!currentUser) {
+        return {
+          redirect: {
+            destination: '/Login',
+            permanent: false,
+          },
+        }
+      }
 
     return {currentUser};
 };

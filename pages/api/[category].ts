@@ -8,7 +8,11 @@ if(req.method !== 'GET'){
 }
 
 try{
-    await serverauth(req,res);
+    await serverauth(req,res);   
+    
+
+    
+
 
 const {category}=req.query;
 

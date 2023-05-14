@@ -2,6 +2,27 @@ import Navbar from '@/components/Navbar';
 import FavoriteCard from '@/components/FavoriteCard';
 import useFavorites from '@/hooks/useFavorites';
 import React from 'react';
+import { NextPageContext } from "next";
+import { getSession} from "next-auth/react";
+
+
+
+export async function getServerSideProps(context: NextPageContext){
+  const session = await getSession(context);
+
+  if(!session){
+      return {
+          redirect:{
+              destination:'/Login',
+              permanent: false,
+          }
+      }
+  }
+  return {
+      props:{}
+  }
+}
+
 
 const MyList = () => {
     const {data:Favorites=[]}=useFavorites();

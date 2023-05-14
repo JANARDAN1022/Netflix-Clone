@@ -19,12 +19,12 @@ const Billboard = () => {
   const {Category} = useRouter().query;
   
   const category = Category as string | undefined;
-  console.log('category query:',category);
+ // console.log('category query:',category);
     const {data:Categories=[]} = useCategory(category);
-    console.log('category:',Categories);
+   // console.log('category:',Categories);
     const Random = Math.floor(Math.random() * Categories.length);
      const categories = Categories[Random];
-     console.log(categories);
+     //console.log(categories);
     
     
   return (
@@ -35,8 +35,8 @@ const Billboard = () => {
  autoPlay
  loop
  muted
-  poster={path==='/'?data.thumbnailUrl:categories?.thumbnailUrl}
-  src={path==='/'?data.videoUrl:categories?.videoUrl}></video>
+  poster={path==='/'?data?.thumbnailUrl:categories?.thumbnailUrl}
+  src={path==='/'?data?.videoUrl:categories?.videoUrl}></video>
   
    
    <div className='absolute top-[30%] md:top-[35%] ml-4 md:ml-16'>

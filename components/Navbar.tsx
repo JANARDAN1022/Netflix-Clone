@@ -8,13 +8,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 
-const TOP_OFFSET = 66;
+
 
 const Navbar = () => {
     const [isHoverd,setisHoverd]=useState(false);
     const[Hoverd,setHoverd]=useState(false);
     const [ShowBackground,setshowBackground]=useState(false);
-
+    const TOP_OFFSET = 66;
 
     useEffect(()=>{
     const handleScroll = ()=>{

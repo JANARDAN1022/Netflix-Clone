@@ -24,7 +24,6 @@ const hashedPassword = await bcrypt.hash(Password,12);
 const user = await prismadb.user.create({
     data: {
         email,
-        name:"",
         hashedPassword,
         image:"",
         emailVerified: new Date(),
