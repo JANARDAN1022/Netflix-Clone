@@ -2,6 +2,7 @@ import Input from "@/components/input";
 import React,{ useCallback, useState } from "react";
 import Link from "next/link";
 import {signIn} from 'next-auth/react';
+import Image from 'next/image';
 
 
 const Auth = () => {
@@ -45,7 +46,7 @@ const Auth = () => {
     <div className="relative h-full w-full bg-[url('/images/LoginImage.jpg')]  bg-no-repeat bg-center bg-fixed bg-cover">
     <div className="bg-black w-full h-full bg-opacity-50">
       <nav className="px-12 py-5">
-        <img src="/images/Netflixlogo.png" alt="logo" className="h-12"/>
+        <Image src="/images/Netflixlogo.png" alt="logo" className="h-12" width={120} height={40}/>
       </nav>
 
     <div className="flex justify-center">

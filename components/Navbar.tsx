@@ -6,7 +6,7 @@ import {AiOutlineCaretDown} from 'react-icons/ai';
 import AccountMenu from './AccountMenu';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+import Image from 'next/image';
 
 
 
@@ -44,7 +44,7 @@ const Navbar = () => {
     <div className={`px-4 md:px-16 py-6 flex flex-row items-center transition duration-500 ${ShowBackground?'bg-black bg-opacity-90':''}`}>
     
     
-     <img className='h-6 lg:h-7 cursor-pointer' src='/images/Netflixlogo.png' alt='Logo'   />
+     <Image className='h-6 lg:h-7 cursor-pointer' src='/images/Netflixlogo.png' alt='Logo' width={100}  height={50}/>
     
     <div className='flex-row ml-8 gap-7 hidden lg:flex'>
 
@@ -75,7 +75,7 @@ const Navbar = () => {
      <div className='h-[60px] w-[60px] justify-center  flex flex-row  items-center gap-2 cursor-pointer   relative' onMouseEnter={()=>setHoverd(true)} onMouseLeave={()=>setHoverd(false)}>
       
       <div className='w-8 h-8 ;g:w-10 lg:h-10mrounded-md overflow-hidden' >
-       <img src='/images/default-blue.png' alt='ProfilePic' />
+       <Image src='/images/default-blue.png' alt='ProfilePic' width={50}  height={50}/>
       </div>
  <AiOutlineCaretDown className={`text-white mt-1 ${Hoverd?'rotate-180 transition':''}`}/>
      <AccountMenu visible={Hoverd?true:false}/>

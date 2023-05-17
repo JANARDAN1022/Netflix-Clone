@@ -2,7 +2,7 @@ import React from 'react';
 import {BsFillPlayFill} from 'react-icons/bs';
 import FavoriteButton from './favoriteButton';
 import { useRouter } from 'next/router';
-
+import Image from 'next/image';
 
 
 
@@ -25,15 +25,13 @@ const MovieCard :React.FC<MovieCardProps>=({
   return (
     <div className='group  bg-zinc-900 relative h-[15vw]  ml-[1.5px]'>
     
-    <img 
+    <Image
+    width={180}  height={50}
     className='
-     cursor-pointer object-cover transition
-    duration shadow--xl rounded-[3px]
-    group-hover:opacity-90 sm:group-hover:opacity-0
-   delay-300 w-[16vw] h-[8.5vw] 
+    w-60 h-[60%] object-fill cursor-pointer
     '
     onClick={()=> router.push(`/watch/${data?.id}`)}   
-    src={data.thumbnailUrl} alt='' />
+    src={data?.thumbnailUrl} alt='' />
 
 
    <div className=' w-[20vmax] 
@@ -50,7 +48,7 @@ const MovieCard :React.FC<MovieCardProps>=({
     onClick={()=> router.push(`/watch/${data?.id}`)}
     
     
-    src={data.videoUrl} autoPlay muted loop  />
+    src={data?.videoUrl} autoPlay muted loop  />
      
    
    <div className='

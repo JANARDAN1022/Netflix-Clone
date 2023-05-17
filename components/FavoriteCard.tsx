@@ -2,6 +2,7 @@ import React from 'react';
 import {BsFillPlayFill} from 'react-icons/bs';
 import FavoriteButton from './favoriteButton';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 
 
@@ -25,7 +26,8 @@ const FavoriteCard :React.FC<FavoriteCardProps>=({
   return (
     <div className='group bg-zinc-900 relative h-[10vw] mt-2  ml-1 '>
     
-    <img 
+    <Image
+    width={40}  height={50}
     className='
      cursor-pointer object-cover transition
     duration shadow--xl rounded-[3px]
