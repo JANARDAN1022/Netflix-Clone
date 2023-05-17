@@ -79,7 +79,7 @@ const HandleGetStartedClick = ()=>{
     <div className="relative h-full w-full bg-[url('/images/LoginImage.jpg')]  bg-no-repeat bg-center bg-fixed bg-cover">
           <div className="bg-black w-full h-full bg-opacity-50">
             <nav className="p-5">
-                <Image src="/images/Netflixlogo.png " alt="BGImg" className="h-11 left-44 absolute" width={100} height={40}/>
+                <Image src="/images/Netflixlogo.png" alt="BGImg" className="h-11 left-44 absolute" width={100} height={40}/>
                 <button className="absolute text-white bg-red-600 p-2 right-56 w-28 rounded-md hover:bg-red-700 transition font-semibold"><Link href='/Login' >Sign In</Link></button>
             </nav>
 
