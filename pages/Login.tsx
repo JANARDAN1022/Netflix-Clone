@@ -4,10 +4,9 @@ import Link from "next/link";
 import {signIn} from 'next-auth/react';
 
 
-const auth = () => {
+const Auth = () => {
     const[email,setemail]=useState("");
     const[password,setPassword]=useState("");
-   
     const [isLoading,setisLoading]=useState(false);
     const [error,seterror]=useState(false);
     const[Perror,setPerror]=useState(false);
@@ -94,4 +93,4 @@ const auth = () => {
   )
 }
 
-export default auth;
+export default Auth;
