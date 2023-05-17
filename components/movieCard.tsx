@@ -26,7 +26,7 @@ const MovieCard :React.FC<MovieCardProps>=({
     <div className='group  bg-zinc-900 relative h-[15vw]  ml-[1.5px]'>
     
     <Image
-    width={180}  height={50}
+    width={182}  height={50}
     className='
     w-60 h-[60%] object-cover cursor-pointer
     '
