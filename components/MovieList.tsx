@@ -16,10 +16,12 @@ interface MovieListProps{
 }
 
 const MovieList : React.FC<MovieListProps>=({data, title}) => {
-    if(isEmpty(data)){
+  const [showLeftArrow,setshowLeftArrow]=useState(false);
+   
+  if(isEmpty(data)){
         return null;
     }
-    const [showLeftArrow,setshowLeftArrow]=useState(false);
+   
  
   const handleShowLeft = ()=>{
     setshowLeftArrow(!showLeftArrow);
