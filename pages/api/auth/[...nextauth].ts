@@ -1,7 +1,7 @@
 import NextAuth,{AuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import prismadb from "@/lib/prismadb";
-//import {compare} from 'bcrypt';
+import {compare} from 'bcrypt';
 
 
 export const authOptions: AuthOptions={
@@ -34,11 +34,10 @@ export const authOptions: AuthOptions={
                     throw new Error('Email does Not Exist');
                 }
 
-                /*const isCorrectPassword = await compare(
+                const isCorrectPassword = await compare(
                     credentials.password,
                     User.hashedPassword
-                );*/
-                const isCorrectPassword = credentials.password === User.hashedPassword;
+                );
                 if(!isCorrectPassword){
                     throw new Error('Incorrect Email or Password');
                 }

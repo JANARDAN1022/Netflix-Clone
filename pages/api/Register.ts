@@ -1,4 +1,4 @@
-//import bcrypt from 'bcrypt';
+import bcrypt from 'bcrypt';
 import {NextApiRequest,NextApiResponse} from 'next';
 import prismadb from '@/lib/prismadb';
 
@@ -19,8 +19,8 @@ if(existingUser){
     return res.status(422).json({error:'User Already Exists With This Email'});
 }
 
-//const hashedPassword = await bcrypt.hash(Password,12);
-const hashedPassword = Password;
+const hashedPassword = await bcrypt.hash(Password,12);
+
 const user = await prismadb.user.create({
     data: {
         email,
