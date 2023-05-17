@@ -94,7 +94,7 @@ const HandleGetStartedClick = ()=>{
         <IoIosArrowBack onClick={()=>{setShowInput(false); setShowButton(false); setPassword(""); }} className={`bg-transparent absolute left-10 top-44  h-[6vmax]   cursor-pointer text-zinc-300  w-20 hover:text-zinc-50 transition ${ShowInput?'visible':'hidden'}`} />
         <input style={{width:'500px'}} placeholder={`${!Error?'Create New Password':'Field Cannot Be Empty *'}`} className={`p-5 relative  text-white bg-zinc-800  border  h-[4.5rem]  ${Error?'placeholder-red-700 font-semibold text-lg ':''} w-full rounded-md ${ShowInput?'visible':'hidden'}`} name="PASSWORD" onChange={(e:any)=>setPassword(e.target.value)} id="password" type="password" value={Password} autoComplete="off"/>
         
-<div className={` absolute right-[16.5vmax] mr-5 mt-4 inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current text-white border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"role="status ${isLoading?'visible':'hidden'}`}>
+<div className={` absolute right-[16.5vmax] mr-12 mt-4 inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current text-white border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"role="status ${isLoading?'visible':'hidden'}`}>
   <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"></span >
 </div>
 

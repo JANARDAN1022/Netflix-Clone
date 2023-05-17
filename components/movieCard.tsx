@@ -28,7 +28,7 @@ const MovieCard :React.FC<MovieCardProps>=({
     <Image
     width={180}  height={50}
     className='
-    w-60 h-[60%] object-fill cursor-pointer
+    w-60 h-[60%] object-cover cursor-pointer
     '
     onClick={()=> router.push(`/watch/${data?.id}`)}   
     src={data?.thumbnailUrl} alt='' />

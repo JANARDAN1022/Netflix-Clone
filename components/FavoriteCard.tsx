@@ -27,7 +27,7 @@ const FavoriteCard :React.FC<FavoriteCardProps>=({
     <div className='group bg-zinc-900 relative h-[10vw] mt-2  ml-1 '>
     
     <Image
-    width={40}  height={50}
+    width={150}  height={50}
     className='
      cursor-pointer object-cover transition
     duration shadow--xl rounded-[3px]
