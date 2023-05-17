@@ -1,5 +1,5 @@
 import Input from "@/components/input";
-import { useCallback, useState } from "react";
+import React,{ useCallback, useState } from "react";
 import Link from "next/link";
 import {signIn} from 'next-auth/react';
 
@@ -56,7 +56,7 @@ const auth = () => {
       <h2 className="text-white text-4xl mb-8 font-semibold">Sign In</h2>
      
       <div className="flex flex-col gap-4">
-      <Input label={`${error?"Email is Required*":"Email"}`} onChange={(e:any)=>setemail(e.target.value)} id="email" type="email" value={email} />
+      <Input  label={`${error?"Email is Required*":"Email"}`} onChange={(e:any)=>setemail(e.target.value)} id="email" type="email" value={email} />
      
       <Input label={`${Perror?"Password is Required*":"Password"}`}  onChange={(e:any)=>setPassword(e.target.value)} id="password" type="password" value={password} />
       </div>

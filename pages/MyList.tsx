@@ -36,7 +36,7 @@ const MyList = () => {
        </div>
        <div className='flex flex-wrap gap-1'>
         {Favorites && Favorites.map((Favorites:any)=>(
-        <FavoriteCard data={Favorites}/>
+        <FavoriteCard data={Favorites} key={Favorites._id}/>
        ))
 }
        </div>
